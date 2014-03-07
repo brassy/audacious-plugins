@@ -46,17 +46,17 @@ LIBS="$LIBS $AUDACIOUS_LIBS"
 dnl Check for libxml2 (required to load XSPF playlists from previous versions)
 dnl ==========================================================================
 
-PKG_CHECK_MODULES([XML], [libxml-2.0])
+# PKG_CHECK_MODULES([XML], [libxml-2.0])
 
 dnl Default Set of Plugins
 dnl ======================
 
-INPUT_PLUGINS="tonegen metronom vtx"
+INPUT_PLUGINS="tonegen metronom"
 OUTPUT_PLUGINS=""
-EFFECT_PLUGINS="compressor crossfade crystalizer ladspa mixer stereo_plugin voice_removal echo_plugin"
-GENERAL_PLUGINS="alarm albumart delete-files search-tool"
-VISUALIZATION_PLUGINS="blur_scope cairo-spectrum"
-CONTAINER_PLUGINS="asx asx3 audpl m3u pls xspf"
+EFFECT_PLUGINS="compressor crossfade crystalizer mixer stereo_plugin voice_removal echo_plugin"
+GENERAL_PLUGINS="headless"
+VISUALIZATION_PLUGINS=""
+CONTAINER_PLUGINS="audpl m3u pls"
 TRANSPORT_PLUGINS="gio"
 
 dnl Console
